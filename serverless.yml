@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: backend.media_decryption
+service: serverless-boilerplate
 
 provider:
   name: aws
@@ -36,11 +36,12 @@ provider:
 #          - - "arn:aws:s3:::"
 #            - "Ref" : "ServerlessDeploymentBucket"
 
-# you can add packaging information here
-#package:
-#  exclude:
-#    - exclude-me.js
-#  artifact: my-service-code.zip
+package:
+ exclude:
+   - "src/**"
+   - "test/**"
+   - "**.spec.js"
+ # artifact: my-service-code.zip
 
 functions:
   hello:

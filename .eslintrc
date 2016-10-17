@@ -9,5 +9,10 @@
       "devDependencies": true,
       optionalDependencies: false,
     }]
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "expect": true
   }
 }
