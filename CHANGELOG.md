@@ -8,4 +8,4 @@
 
 ### v1.0.0
 
- * backendmedia_decryption initial commit.
+ * serverless_boilerplate initial commit.
