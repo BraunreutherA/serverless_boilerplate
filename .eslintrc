@@ -13,6 +13,10 @@
   "globals": {
     "describe": true,
     "it": true,
-    "expect": true
+    "expect": true,
+    "createLambdaContext": true,
+    "createS3Event": true,
+    "createSNSEvent": true,
+    "createDynamoDbEvent": true
   }
 }
