@@ -8,23 +8,18 @@
     "dist/"
   ],
   "scripts": {
-    "clean": "rm -rf api/lib",
+    "clean": "rm -rf lib",
     "lint": "eslint src test",
-    "check": "dependency-check package.json --entry src",
+    "check": "dependency-check package.json --entry src/handler.js",
     "test": "mocha './src/**/*.spec.js'",
-    "prebuild": "npm run check -s && npm run clean -s",
-    "build": "babel --optional runtime src -d api/lib",
-    "build:node_modules": "cd api && npm install && cd ..",
-    "postbuild": "npm run test -s",
+    "prebuild": "npm run clean",
+    "build": "babel --optional runtime src -d lib",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover test/index.js",
-    "coveralls": "npm run coverage -s && coveralls < coverage/lcov.info",
-    "postcoveralls": "rimraf ./coverage",
-    "prepublish": "npm run build -s",
-    "deploy": "npm run build && npm run build:node_modules && cd api && serverless deploy",
+    "predeploy": "npm install && npm run check && npm run lint && npm run test && npm run build",
+    "deploy": "serverless deploy",
     "patch": "npm version patch",
     "minor": "npm version minor",
-    "major": "npm version major",
-    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md"
+    "major": "npm version major"
   },
   "repository": {
     "type": "git",
