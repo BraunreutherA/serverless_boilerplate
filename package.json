@@ -15,7 +15,6 @@
     "prebuild": "npm run clean",
     "build": "babel --optional runtime src -d lib",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover test/index.js",
-    "predeploy": "npm install && npm run check && npm run lint && npm run test && npm run build",
     "deploy": "serverless deploy",
     "patch": "npm version patch",
     "minor": "npm version minor",
