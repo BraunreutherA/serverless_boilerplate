@@ -41,6 +41,10 @@ package:
    - "src/**"
    - "test/**"
    - "**.spec.js"
+   - "node_modules/serverless/**"
+   - "node_modules/chai/**"
+   - "node_modules/mocha/**"
+   - "node_modules/sinon*/**"
  # artifact: my-service-code.zip
 
 functions:
