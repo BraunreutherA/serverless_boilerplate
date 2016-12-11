@@ -45,6 +45,10 @@ package:
    - "node_modules/chai/**"
    - "node_modules/mocha/**"
    - "node_modules/sinon*/**"
+   - "node_modules/aws-lambda-test-utils/**"
+   - "node_modules/babel*/**"
+   - "node_modules/dependency-check/**"
+   - "node_modules/eslint*/**"
  # artifact: my-service-code.zip
 
 functions:
